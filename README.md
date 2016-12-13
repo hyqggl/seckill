@@ -10,5 +10,7 @@ a inventory seckill system.
   添加了基于spring的service层，并进行了事务声明。
   加入Controller，并实现了部分接口
 
+[16/12/12]
+    添加了Web层，并完成了前端页面。
 
 
