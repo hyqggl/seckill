@@ -41,7 +41,7 @@ public class SeckillServiceImpl implements SeckillService {
     private final String salt = "asdasfdgffhf12412hfhfddf%#$##^sdfs%$&67876";
 
     public List<Seckill> getSeckillList() {
-        return seckillDao.queryAll(0, 4);
+        return seckillDao.queryAll(0, 10);
     }
 
     public Seckill getById(long seckillId) {
