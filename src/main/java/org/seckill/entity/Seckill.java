@@ -1,5 +1,6 @@
 package org.seckill.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Date;
  */
 
 //秒杀库存表
-public class Seckill {
+public class Seckill{
     //商品库存id
     private long seckillId;
     //商品名称

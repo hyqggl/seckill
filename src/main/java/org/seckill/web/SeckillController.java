@@ -9,6 +9,7 @@ import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SeckillCloseException;
 import org.seckill.exception.SeckillException;
 import org.seckill.service.SeckillService;
+import org.seckill.service.impl.SeckillServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class SeckillController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private SeckillService seckillService;
+    private SeckillService seckillService; // TODO
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(Model model) {
@@ -82,7 +83,8 @@ public class SeckillController {
         }
         SeckillResult<SeckillExecution> result;
         try {
-            SeckillExecution execution = seckillService.executeSckilll(seckillId, phone, md5);
+            //存储过程
+            SeckillExecution execution = seckillService.executeSckilllProcedure(seckillId, phone, md5);
             return new SeckillResult<SeckillExecution>(true, execution);
         } catch (RepeatKillException e) {
             SeckillExecution execution = new SeckillExecution(seckillId, SeckillStatEnum.REPEAT_KILL);

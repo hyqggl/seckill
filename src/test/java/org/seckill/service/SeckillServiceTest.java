@@ -7,6 +7,7 @@ import org.seckill.dto.SeckillExecution;
 import org.seckill.entity.Seckill;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SeckillCloseException;
+import org.seckill.service.impl.SeckillServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,4 +66,15 @@ public class SeckillServiceTest {
         }
     }
 
+    @Test
+    public void executeSckilllProcedure() {
+        long seckillId = 1004;
+        long phone = 13567890777L;
+        Exposer exposer = seckillService.exportSeckillUrl(seckillId);
+        if (exposer.isExposed()) {
+            String md5 = exposer.getMd5();
+            SeckillExecution execution = seckillService.executeSckilllProcedure(seckillId, phone, md5);
+            logger.info(execution.getStateInfo());
+        }
+    }
 }
