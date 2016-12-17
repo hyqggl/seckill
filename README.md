@@ -15,10 +15,14 @@ a inventory seckill system prototype.
 
 
 [Log]
+
 16/12/09   加入了DAO层
+
 16/12/11   添加了基于spring的service层，并进行了事务声明。
            加入Controller，并实现了部分接口
+
 16/12/12   完善了Web层(MVC)，并完成了前端交互页面。
+
 16/12/14  完善了并发优化。1、加入redis进行缓存。2、调整查询顺序。3、使用存储过程，将操作移动到MYSQL端
 
 
