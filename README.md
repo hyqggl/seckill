@@ -1,6 +1,5 @@
 # Seckill
-[16/12/08] 
-存货秒杀系统原型.用Spring+SpringMVC+Mybatis实现，并进行高并发优化。
+存货秒杀系统原型.用于模拟商品秒杀以及高并发。后端：Spring，SpringMVC，Mybatis；前端：Bootstrap
 
 a inventory seckill system prototype.
 
