@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="common/tag.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,11 +7,53 @@
     <%@include file="common/head.jsp"%>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SECKILL</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Default</a></li>
+                <li><a href="#">Static top</a></li>
+                <li class="active"><a href="#">Fixed top</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br>
+<br>
+<br>
+
     <div class="container">
         <div class="panel panel-default text-center">
             <div class="panel-heading">
                  <h1>${seckill.name}</h1>
-             </div>
+            </div>
 
              <div class="panel-body">
                   <h2 class="text-danger">
@@ -18,10 +61,25 @@
                       <span class="glyphicon glyphicon-time"></span>
                       <%-- 展示倒计时 --%>
                       <span class="glyphicon" id="seckill-box"></span>
-                 </h2>
-              </div>
-           </div>
+                  </h2>
+             </div>
         </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="panel panel-default text-center">
+            <div class="panel-heading">
+                <h1>商品详情</h1>
+            </div>
+
+            <div class="panel-body">
+
+            </div>
+         </div>
+    </div>
+
     <%-- 登录弹出层，输入电话 --%>
     <div id="killPhoneModal" class="modal fade">
         <div class="modal-dialog">
@@ -53,9 +111,8 @@
         </div>
     </div>
 </body>
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <%-- JQuery countdown --%>

@@ -30,13 +30,13 @@ public class SeckillDaoTest {
     @org.junit.Test
     public void reduceNumber() throws Exception {
         Date killTime = new Date();
-        int updateCount = seckillDao.reduceNumber(1000L,killTime);
+        int updateCount = seckillDao.reduceNumber(1004L,killTime);
         System.out.println("updateCount= " + updateCount);
     }
 
     @org.junit.Test
     public void queryById() throws Exception {
-        long id = 1000;
+        long id = 1004;
         Seckill seckill = seckillDao.queryById(id);
         System.out.println(seckill.getName());
         System.out.println(seckill);

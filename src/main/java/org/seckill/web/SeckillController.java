@@ -100,6 +100,11 @@ public class SeckillController {
 
     }
 
+    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+    public String dashboard(Model model){
+        return "backend/dashboard";
+    }
+
     @RequestMapping(value = "/time/now", method = RequestMethod.GET)
     @ResponseBody
     public SeckillResult<Long> time() {
