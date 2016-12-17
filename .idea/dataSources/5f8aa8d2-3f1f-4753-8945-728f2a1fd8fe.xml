@@ -76,7 +76,7 @@
     <column id="26" parent="15" name="price">
       <Position>3</Position>
       <Comment>价格</Comment>
-      <DataType>double(9,3)|0</DataType>
+      <DataType>int(11)|0</DataType>
     </column>
     <column id="27" parent="15" name="init_amount">
       <Position>5</Position>

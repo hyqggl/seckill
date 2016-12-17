@@ -8,43 +8,7 @@
     <%@include file="common/head.jsp"%>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">SECKILL</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Default</a></li>
-                <li><a href="#">Static top</a></li>
-                <li class="active"><a href="./">Fixed top</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<%@include file="common/navigation.jsp"%>
 
 <br>
 <br>
@@ -59,35 +23,62 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>库存</th>
-                            <th>开始时间</th>
-                            <th>结束时间</th>
-                            <th>即刻秒杀</th>
-                            <th>商品详情</th>
+                            <th class="col-md-2 text-center">名称</th>
+                            <th class="col-md-2 text-center">价格</th>
+                            <th class="col-md-3 text-center">库存</th>
+                            <!--<th>开始时间</th>
+                            <th>结束时间</th> -->
+                            <th class="col-md-3 text-center">状态</th>
+                            <th class="col-md-2 text-center">商品详情</th>
                         </tr>
                     </thead>
                     <tbody>
                         <c:forEach var="sk" items="${list}">
                         <tr>
-                            <td>${sk.name}</td>
+                            <td class="text-center">${sk.name}</td>
+                            <td class="text-center">${sk.price}</td>
                             <td>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-info" style="width: 40%">
-                                            ${sk.number}
-                                    </div>
+                                    <c:if test="${timenow>sk.endTime}">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="${sk.number}"
+                                             aria-valuemin="0" aria-valuemax="${sk.initAmount}"
+                                             style="width: ${sk.number/sk.initAmount*100}%">
+                                             ${sk.number}
+                                        </div>
+                                    </c:if>
+                                    <c:if test="${(timenow>=sk.startTime)&&(timenow<=sk.endTime)}">
+                                         <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="${sk.number}"
+                                              aria-valuemin="0" aria-valuemax="${sk.initAmount}"
+                                              style="width: ${sk.number/sk.initAmount*100}%">
+                                             ${sk.number}
+                                         </div>
+                                    </c:if>
+                                    <c:if test="${timenow<sk.startTime}">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="${sk.number}"
+                                             aria-valuemin="0" aria-valuemax="${sk.initAmount}"
+                                             style="width: ${sk.number/sk.initAmount*100}%">
+                                                ${sk.number}
+                                        </div>
+                                    </c:if>
                                 </div>
                             </td>
-                            <td>
+                            <!--<td>
                                 <fmt:formatDate value="${sk.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                             </td>
                             <td>
                                 <fmt:formatDate value="${sk.endTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+                            </td> -->
+                            <td class="text-center">
+                                <c:if test="${timenow>sk.endTime}">已结束</c:if>
+                                <c:if test="${(timenow>sk.startTime)&&(timenow<sk.endTime)}">
+                                <a class="btn btn-success" href="#">秒杀中</a>
+                                </c:if>
+                                <c:if test="${timenow<sk.startTime}">
+                                    开始时间：
+                                    <fmt:formatDate value="${sk.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+                                </c:if>
                             </td>
-                            <td>
-                                <a class="btn btn-info" href="#" target="_blank">秒杀</a>
-                            </td>
-                            <td>
+                            <td class="text-center">
                                 <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">link</a>
                             </td>
                             <td></td>

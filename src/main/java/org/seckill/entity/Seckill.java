@@ -14,7 +14,7 @@ public class Seckill{
     //商品名称
     private String name;
     //价格
-    private double price;
+    private int price;
     //库存数量
     private int number;
     //初始库存数量
@@ -76,11 +76,11 @@ public class Seckill{
         this.createTime = createTime;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

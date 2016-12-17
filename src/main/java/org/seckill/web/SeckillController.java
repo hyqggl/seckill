@@ -36,7 +36,9 @@ public class SeckillController {
     public String list(Model model) {
         //获取列表页
         List<Seckill> list = seckillService.getSeckillList();
+        Date timenow = new Date();
         model.addAttribute("list", list);
+        model.addAttribute("timenow", timenow);
         //list.jsp + model = ModelAndView
         return "list";  ///WEB-INF/jsp/"list".jsp
     }

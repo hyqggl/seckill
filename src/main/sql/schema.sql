@@ -24,7 +24,7 @@ CREATE TABLE `user` (
 CREATE TABLE `seckill` (
   `seckill_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '商品库存id',
   `name` varchar(120) NOT NULL COMMENT '商品名称',
-  `price` double(9,3) DEFAULT NULL COMMENT '价格',
+  `price` int(11) DEFAULT NULL COMMENT '价格',
   `number` int(11) NOT NULL COMMENT '库存数量',
   `init_amount` int(11) DEFAULT NULL COMMENT '初始库存数量',
   `start_time` timestamp NOT NULL COMMENT '秒杀开启时间',
