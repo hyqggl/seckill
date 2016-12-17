@@ -3,13 +3,14 @@
 
 a inventory seckill system prototype.
 
+【说明】
 1.通过src/main/sql/schema.sql 创建数据库
 
 2.项目部署后，通过../seckill/list进入主页
 
 
 
-[其他需要优化的点]
+【其他需要优化的点】
 
 1. 列表页没有显示倒计时以及商品状态。
 
