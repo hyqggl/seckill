@@ -4,6 +4,7 @@
 a inventory seckill system prototype.
 
 【说明】
+
 1.通过src/main/sql/schema.sql 创建数据库
 
 2.项目部署后，通过../seckill/list进入主页
