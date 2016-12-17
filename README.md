@@ -1,17 +1,27 @@
 # Seckill
 [16/12/08] 
 存货秒杀系统原型.用Spring+SpringMVC+Mybatis实现，并进行高并发优化。
+
 a inventory seckill system prototype.
 
 1.通过src/main/sql/schema.sql 创建数据库
+
 2.项目部署后，通过../seckill/list进入主页
 
 
+
 [其他需要优化的点]
+
 1. 列表页没有显示倒计时以及商品状态。
+
 2. 秒杀成功后--按键或直接跳转到列表页。
+
 3. 购物车
+
 4. 存货内容可改变为其他更有趣的类型，并实现后台管理页面，文件上传下载等功能。
+
+
+
 
 
 [Log]
