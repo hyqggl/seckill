@@ -36,5 +36,6 @@ a inventory seckill system prototype.
 
 16/12/14  完善了并发优化。1、加入redis进行缓存。2、调整查询顺序。3、使用存储过程，将操作移动到MYSQL端
 
+16/12/17  添加用户表，为商品表添加了3个字段。改进list页面，添加导航栏等。
 
-
+![image](http://github.com/hyqggl/seckill/demo/1.png)
