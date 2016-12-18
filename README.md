@@ -38,4 +38,6 @@ a inventory seckill system prototype.
 
 16/12/17  添加用户表，为商品表添加了3个字段。改进list页面，添加导航栏等。
 
+16/12/18  优化了后台list等界面
+
 ![image](https://github.com/hyqggl/seckill/raw/master/demo/1.png)
