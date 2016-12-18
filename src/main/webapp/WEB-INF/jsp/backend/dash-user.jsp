@@ -11,10 +11,12 @@
 
 <div class="container-fluid">
     <div class="row">
+
         <%@include file="back-nav-sidebar.jsp"%>
+
         <div class="col-sm-9 col-md-10 main">
-            <h1 class="page-header">SECKILL</h1>
-            <h2 class="sub-header">概况</h2>
+            <h1 class="page-header">用户</h1>
+            <h2 class="sub-header">用户管理</h2>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -48,3 +50,4 @@
 <script src="../../../resources/js/bootstrap.min.js"></script>
 </body>
 </html>
+

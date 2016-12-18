@@ -107,6 +107,18 @@ public class SeckillController {
         return "backend/dashboard";
     }
 
+    @RequestMapping(value = "/dashboard/{param}", method = RequestMethod.GET)
+    public String dashboard_x(@PathVariable("param") String param, Model model){
+        if (param.equals("list")) {
+            List<Seckill> list = seckillService.getSeckillList();
+            model.addAttribute("list", list);
+        }
+        Date timenow = new Date();
+        model.addAttribute("timenow", timenow);
+        return "backend/dash-" + param;
+    }
+
+
     @RequestMapping(value = "/time/now", method = RequestMethod.GET)
     @ResponseBody
     public SeckillResult<Long> time() {
