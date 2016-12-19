@@ -4,6 +4,7 @@ import org.seckill.dto.Exposer;
 import org.seckill.dto.SeckillExecution;
 import org.seckill.dto.SeckillResult;
 import org.seckill.entity.Seckill;
+import org.seckill.entity.User;
 import org.seckill.enums.SeckillStatEnum;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SeckillCloseException;
@@ -50,7 +51,7 @@ public class SeckillController {
         }
         Seckill seckill = seckillService.getById(seckillId);
         if (seckill == null) {
-            return "foward:/seckill/list";
+            return "forward:/seckill/list";
         }
         model.addAttribute("seckill", seckill);
         return "detail";
@@ -100,22 +101,6 @@ public class SeckillController {
             return new SeckillResult<SeckillExecution>(true, execution);
         }
 
-    }
-
-    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
-    public String dashboard(Model model){
-        return "backend/dashboard";
-    }
-
-    @RequestMapping(value = "/dashboard/{param}", method = RequestMethod.GET)
-    public String dashboard_x(@PathVariable("param") String param, Model model){
-        if (param.equals("list")) {
-            List<Seckill> list = seckillService.getSeckillList();
-            model.addAttribute("list", list);
-        }
-        Date timenow = new Date();
-        model.addAttribute("timenow", timenow);
-        return "backend/dash-" + param;
     }
 
 

@@ -8,6 +8,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -34,6 +36,14 @@ public class SuccessKilledDaoTest {
         SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(id, phone);
         System.out.println(successKilled);
         System.out.println(successKilled.getSeckill());
+    }
+
+    @Test
+    public void queryAll() throws Exception {
+        List<SuccessKilled> successKilledList = successKilledDao.queryAll(0,10);
+        for (SuccessKilled sk : successKilledList) {
+            System.out.println(sk);
+        }
     }
 
 }

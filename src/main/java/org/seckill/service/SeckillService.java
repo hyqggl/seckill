@@ -17,13 +17,13 @@ import java.util.List;
 public interface SeckillService {
 
     /**
-     * 查询所有秒杀记录
+     * 查询所有秒杀商品
      * @return
      */
     List<Seckill> getSeckillList();
 
     /**
-     * 查询单个秒杀记录
+     * 查询单个秒杀商品
      * @param seckillId
      * @return
      */

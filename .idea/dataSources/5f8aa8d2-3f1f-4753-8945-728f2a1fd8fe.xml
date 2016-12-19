@@ -148,29 +148,29 @@ user_phone</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="41" parent="17" name="phone">
-      <Position>7</Position>
+      <Position>8</Position>
       <Comment>用户手机号</Comment>
       <DataType>bigint(20)|0</DataType>
     </column>
     <column id="42" parent="17" name="email">
-      <Position>3</Position>
+      <Position>4</Position>
       <Comment>用户邮箱</Comment>
       <DataType>varchar(20)|0</DataType>
     </column>
     <column id="43" parent="17" name="address">
-      <Position>4</Position>
+      <Position>5</Position>
       <Comment>用户住址</Comment>
       <DataType>varchar(100)|0</DataType>
     </column>
     <column id="44" parent="17" name="register_date">
-      <Position>5</Position>
+      <Position>6</Position>
       <Comment>用户注册日期</Comment>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
     <column id="45" parent="17" name="log_id">
-      <Position>6</Position>
+      <Position>7</Position>
       <Comment>用户日志ID</Comment>
       <DataType>bigint(20)|0</DataType>
     </column>
@@ -180,20 +180,32 @@ user_phone</ColNames>
       <DataType>varchar(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="47" parent="17" name="PRIMARY">
+    <column id="47" parent="17" name="password">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="48" parent="17" name="authority">
+      <Position>9</Position>
+      <Comment>权限</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="49" parent="17" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <argument id="48" parent="18" name="v_seckill_id">
+    <argument id="50" parent="18" name="v_seckill_id">
       <DataType>bigint(20)|0</DataType>
     </argument>
-    <argument id="49" parent="18" name="v_phone">
+    <argument id="51" parent="18" name="v_phone">
       <DataType>bigint(20)|0</DataType>
     </argument>
-    <argument id="50" parent="18" name="v_kill_time">
+    <argument id="52" parent="18" name="v_kill_time">
       <DataType>timestamp|0</DataType>
     </argument>
-    <argument id="51" parent="18" name="r_result">
+    <argument id="53" parent="18" name="r_result">
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>int(11)|0</DataType>
     </argument>

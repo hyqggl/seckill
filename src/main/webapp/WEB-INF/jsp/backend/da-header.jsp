@@ -11,6 +11,8 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="../../../resources/css/dashboard.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>

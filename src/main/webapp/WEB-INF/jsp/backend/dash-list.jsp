@@ -5,9 +5,6 @@
 <%@include file="da-header.jsp"%>
 
 <body>
-<br>
-<br>
-<br>
 <%@include file="back-nav.jsp"%>
 
 <div class="container-fluid">
@@ -15,7 +12,7 @@
 
         <%@include file="back-nav-sidebar.jsp"%>
 
-        <div class="col-sm-9 col-md-10 main">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">商品管理</h1>
             <div class="table-responsive">
                 <table class="table table-striped table-hover">
@@ -31,7 +28,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="sk" items="${list}">
+                    <c:forEach var="sk" items="${seckillList}">
                         <tr>
                             <td class="text-center">${sk.seckillId}</td>
                             <td class="text-center">${sk.name}</td>
@@ -56,10 +53,6 @@
     </div>
 </div>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="../../../resources/js/jquery-1.11.1.min.js"></script>
-<script src="../../../resources/js/bootstrap.min.js"></script>
+<%@include file="../common/bs-footer.jsp"%>
 </body>
 </html>

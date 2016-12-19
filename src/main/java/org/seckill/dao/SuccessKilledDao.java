@@ -3,6 +3,8 @@ package org.seckill.dao;
 import org.apache.ibatis.annotations.Param;
 import org.seckill.entity.SuccessKilled;
 
+import java.util.List;
+
 /**
  * Created by huyiqing on 16/12/10.
  */
@@ -23,4 +25,12 @@ public interface SuccessKilledDao {
      * @return
      */
     SuccessKilled queryByIdWithSeckill(@Param("seckillId") long seckillId, @Param("userPhone") long userPhone);
+
+    /**
+     * 根据偏移量查询秒杀记录
+     * @param offset
+     * @param limit
+     * @return
+     */
+    List<SuccessKilled> queryAll(@Param("offset") long offset, @Param("limit") long limit);
 }

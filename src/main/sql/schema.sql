@@ -12,11 +12,13 @@ use seckill;
 CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
   `name` varchar(25) NOT NULL COMMENT '用户名称',
+  `password` varchar(30) DEFAULT NULL COMMENT '密码',
   `email` varchar(20) DEFAULT NULL COMMENT '用户邮箱',
   `address` varchar(100) DEFAULT NULL COMMENT '用户住址',
   `register_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '用户注册日期',
   `log_id` bigint(20) DEFAULT NULL COMMENT '用户日志ID',
   `phone` bigint(20) DEFAULT NULL COMMENT '用户手机号',
+  `authority` int(11) NOT NULL DEFAULT '0' COMMENT '权限',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='用户表'
 

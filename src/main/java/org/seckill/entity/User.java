@@ -11,6 +11,8 @@ public class User {
     private long id;
     //名称
     private String name;
+    //密码
+    private String password;
     //用户手机号
     private long phone;
     //用户邮箱
@@ -21,6 +23,8 @@ public class User {
     private Date registerDate;
     //日志ID
     private long logId;
+    //权限
+    private int authority;
 
     public long getId() {
         return id;
@@ -78,6 +82,22 @@ public class User {
         this.logId = logId;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(int authority) {
+        this.authority = authority;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -88,6 +108,8 @@ public class User {
                 ", address='" + address + '\'' +
                 ", registerDate=" + registerDate +
                 ", logId=" + logId +
+                ", authority=" + authority +
                 '}';
     }
 }
+
