@@ -11,18 +11,13 @@ a inventory seckill system prototype.
 
 
 
-【其他需要优化的点】
+【其他需要实现的点】
 
-1. 列表页没有显示倒计时以及商品状态。
+1. 秒杀成功后--按键或直接跳转到列表页。
 
-2. 秒杀成功后--按键或直接跳转到列表页。
+2. 购物车 & 收藏夹
 
-3. 购物车
-
-4. 存货内容可改变为其他更有趣的类型，并实现后台管理页面，文件上传下载等功能。
-
-
-
+3. 登录权限
 
 
 [Log]
@@ -39,6 +34,8 @@ a inventory seckill system prototype.
 16/12/17  添加用户表，为商品表添加了3个字段。改进list页面，添加导航栏等。
 
 16/12/18  优化了后台list等界面
+
+16/12/19  增加了用户与清单的DAO等层，改进了后台页面
 
 ![image](https://github.com/hyqggl/seckill/raw/master/demo/1.png)
 
