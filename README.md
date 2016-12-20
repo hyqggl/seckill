@@ -19,6 +19,9 @@ a inventory seckill system prototype.
 
 3. 登录权限
 
+【最初来源】
+
+慕课网imooc[Java高并发秒杀API]课程，在此基础上进行了大量改进
 
 [Log]
 
