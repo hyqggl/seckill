@@ -40,6 +40,8 @@ a inventory seckill system prototype.
 
 16/12/19  增加了用户与清单的DAO等层，改进了后台页面
 
+【页面展示 12/18】
+
 ![image](https://github.com/hyqggl/seckill/raw/master/demo/1.png)
 
 ![image](https://github.com/hyqggl/seckill/raw/master/demo/back.png)
