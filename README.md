@@ -1,7 +1,7 @@
 # Seckill
 存货秒杀系统原型.用于模拟商品秒杀以及高并发。后端：Spring，SpringMVC，Mybatis；前端：Bootstrap
 
-a inventory seckill system prototype.
+an inventory seckill system prototype.
 
 【说明】
 
