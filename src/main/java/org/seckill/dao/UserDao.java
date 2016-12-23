@@ -18,5 +18,7 @@ public interface UserDao {
      */
     List<User> queryAll(@Param("offset") int offset, @Param("limit") int limit);
 
+    User queryById(@Param("id") long id);
 
+    User queryByPhone(@Param("phone") long phone);
 }

@@ -40,4 +40,6 @@ public interface SeckillDao {
      * @param paramMap
      */
     void killByProcedure(Map<String, Object> paramMap);
+
+    int addNewSeckill(@Param("pendingId") long pendingId);
 }
