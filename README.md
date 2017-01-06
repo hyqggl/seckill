@@ -21,7 +21,15 @@ an inventory seckill system prototype.
 
 【最初来源】
 
-慕课网imooc[Java高并发秒杀API]课程，在此基础上进行了大量改进
+慕课网imooc[Java高并发秒杀API]课程，在此基础上进行了改进和开发
+
+
+【页面展示 12/18】
+
+![image](https://github.com/hyqggl/seckill/raw/master/demo/1.png)
+
+![image](https://github.com/hyqggl/seckill/raw/master/demo/back.png)
+
 
 [Log]
 
@@ -39,9 +47,3 @@ an inventory seckill system prototype.
 16/12/18  优化了后台list等界面
 
 16/12/19  增加了用户与清单的DAO等层，改进了后台页面
-
-【页面展示 12/18】
-
-![image](https://github.com/hyqggl/seckill/raw/master/demo/1.png)
-
-![image](https://github.com/hyqggl/seckill/raw/master/demo/back.png)
